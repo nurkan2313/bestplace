@@ -1,0 +1,32 @@
+{% extends "base/home.html" %}
+{% load static %}
+
+
+{% block content %}
+
+  <div class="container" style="margin-top:20px; ">
+    <div class="row">
+      <div class="col-md-12">
+          <p class="h1">Закладки</p>
+          <hr>
+          <div class="place_picture_list">
+          {% for place in user.profile.favorites.all %}
+            {% if place.is_published %}
+            <div class="place_picture_list_in col-md-4">
+              <div class="place">
+                <div class="thumbnail thumb_place">
+                  <img class="img__class size_picture_place"src="{{ place.main_foto.url }}" alt="">
+                  <i class="glyphicon glyphicon-bookmark create-bookmark remove_bookmark" data-place_id="{{ place.id }}"></i>
+                </div>
+                <div class="caption">
+                  <p class="h4 text-muted text-center"><a  href="{% url 'detail' place.slug %}">{{ place.name }}</a></p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+          </div>
+      </div>
+      </div>
+  </div>
+{% endblock %}

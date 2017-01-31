@@ -1,0 +1,85 @@
+{% extends "base/home.html" %}
+{% load static %}
+{% load comments %}
+
+{% block content %}
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvkUxI_-f0V-CN6fcXILmIwxfEUHIKVa4&callback=initMap">
+    </script>
+    <style type="text/css">
+      #map { height:300px; width: 300px; }
+    </style>
+
+    <script type="text/javascript">
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 42.874, lng: 74.590},
+          zoom: 16
+        });
+      }
+    </script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            {{ place.name }}
+        </div>
+            <div class="col-md-6">
+                <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <hr>
+                <div class="col-md-8">
+            <div class="slider">
+                {% for image in place.pictures.all %}
+                <div><img src="{{ image.picture.url }}" width="400" class="img-rounded"></div>
+                <div class="slide__caption">Посмотреть Х фото</div>
+                {% endfor %}
+            </div>
+            <div class="col-md-4">
+                Price goes here
+            </div>
+            <div class="col-md-12">
+                Посмотреть Х фото
+            </div>
+            <div class="col-md-3">
+                tags goes
+                <here></here>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><br>
+                    Description
+                </div>
+            </div>
+              <br>
+              {% render_comment_form for place %}
+              <br>{% render_comment_list for place %}
+        </div>
+        <div class="col-md-4">
+            Here goes working time
+            <ul><br>
+                <li>
+                    Prices here
+                </li>
+                <li>
+                    Prices here
+                </li>
+                <li>
+                    Prices here
+                </li>
+                <li>
+                    Prices here
+                </li>
+            </ul>
+            <ADDRESS>Adress is below</ADDRESS>
+            <div class="well well-sm">
+                <br>Бишкек
+                <p>Гоголя/ Московская</p>
+            </div>
+            <div id="map">This is map</div>
+        </div>
+    </div>
+</div>  
+{% endblock %}
+{% block left_menu %}{% endblock %}
+ 

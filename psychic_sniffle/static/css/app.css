@@ -1,0 +1,189 @@
+
+/* =============================================================================
+   App specific CSS file.
+
+   This is usually where the site/app's CSS specific rules are setup. Note that you could
+   do exactly the same using less by adding a '@import "app.less";' at the end of
+   css/less/bootstrap.less file.
+
+   ========================================================================== */
+
+.place {
+	border: 1px solid #EEEEEE;
+  margin: 10px;
+}
+
+.place .dimmer {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+
+.create-bookmark {
+    padding: 10px;
+    border: 1px solid #3BC22D;
+    border-radius: 100%;
+    color: #F28139;
+    position: absolute;
+    right: 35px;
+    top: 14px;
+    display: none;
+}
+.place:hover .create-bookmark {
+	display: block;
+
+}
+.size_picture_place {
+
+}
+.place_picture_list{
+  list-style: none!important;
+
+}
+.place_picture_list_in {
+  display: inline-block;
+  text-align: left;
+  width: 280px;
+}
+
+
+/*********************/
+.header_in {
+  border-style: solid;
+  border-color: #F3F3F3;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  border-width: 0px 1px;
+}
+#user {
+  position: relative;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 1px 15px;
+  line-height: 140%;
+  background: #E9EDF1 none repeat scroll 0% 0%;
+  color: #607387;
+  border-style: solid;
+  border-color: #D9E0E7;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  border-width: 0px 1px;
+}
+.wrap{
+      border-style: solid;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: 0px 1px 1px;
+    border-color: rgba(100, 100, 100, 0.08);
+    margin-right: 0px !important;
+    margin-left: 0 !important;
+}
+.wrap_in{
+    border-style: solid;
+    border-color: #D9E0E7;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: 0px 1px 1px;
+}
+.profile{
+  padding: 10px 0px 0px;
+}
+.foto{
+  text-align: center;
+  max-height: 500px;
+  height: auto !important;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.profile_info {
+    padding-bottom: 10px;
+}
+.avatar {padding-left: 0 !important;}
+.edit_profile{
+  background: #E4E6E5 none repeat scroll 0% 0%;
+  display: block;
+  padding: 9px 24px;
+}
+
+/********************************/
+.mask{
+    background-size: cover;
+    background-color: rgba(0, 3, 11, 0.75);
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.cover-main{
+  overflow: hidden;
+}
+.nav-style{
+  position: fixed;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  z-index: 999;
+  transition: color 0.2s ease 0s;
+  background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.898) 0px, transparent 95%, transparent 99%) repeat scroll 0% 0%;
+border: none;
+}
+.fixed-bg {
+    background-image: url("../img/yoda.gif");
+    height: 100vh; 
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    /* height: 100% */
+}
+.search_main{
+    top: 50%; 
+    left: 50%; 
+    width: 450px; 
+    height: 450px; 
+    position: absolute; 
+    margin-left: -225px; 
+}
+.inp {    
+    padding: 10px;
+    border: solid 1px gainsboro;
+    -webkit-transition: box-shadow 0.3s, border 0.3s;
+    -moz-transition: box-shadow 0.3s, border 0.3s;
+    -o-transition: box-shadow 0.3s, border 0.3s;
+    transition: box-shadow 0.3s, border 0.3s;
+    width: 80%;
+}
+.butt {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    
+    cursor: pointer;
+    margin-left: 135px;
+}
+.butt:hover {
+    background-color: #fff;
+    border-style: solid;
+    border-color: #4CAF50;
+    color: black;
+}

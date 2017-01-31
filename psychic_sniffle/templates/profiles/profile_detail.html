@@ -1,0 +1,62 @@
+{% extends "base/home.html" %}
+{% load static %}
+
+
+{% block content %} 
+<div class="container">
+    <div class="col-md-2">
+        <a href="{% url 'profiles_bookmark_list' %}">Закладки</a>
+    </div>
+    <div class="col-md-10">
+        <div class="header">
+            <div class="header_in">
+                <div id='user'>
+                    <h3>{{ request.user.username }}</h3>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="row wrap">
+            <div class="wrap_in">
+                <div class="col-md-3 avatar">
+                    <div>
+                        <div class="content">
+                            <div class="profile">
+                                <div class="foto">
+                                    <img src="{% static 'img/5753620800_2_1_1.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="edit_profile">
+                                <a href="">Редактировать профиль</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="profile_info">
+                        <div class="bio">
+                            <div>
+                                <p>{{request.user.get_full_name}}</p>
+                                <p><a href="">изменить статус</a></p>
+                            </div>
+                            <div>
+                                <p> {{ request.user.profile.status }}</p>
+                                <form action="">
+                                    <input type="text">
+                                    <input type="button" value="отправить">
+                                </form>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wall">
+                        <div class="status">
+                            
+                        </div>
+                    </div>
+                </div><!--col-md-9 -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

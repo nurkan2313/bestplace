@@ -1,0 +1,45 @@
+{% extends "base/home.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+<div class="row">
+<h1>Результаты поиска: {{ query }}</h1>
+
+
+
+<table class='table'>
+<thead>
+<th></th>
+<th>Места</th>
+</thead>
+
+<tbody>
+{{ places}}
+{% for place in places %}
+    <tr>
+        <td>{{ place.name }}</td>
+            <td style="width:160px; height:160px;">
+            {% for item in place.main_foto_set.all %}
+                <img src="{{ item.main_foto.url }}" alt="">
+            {% endfor %}
+              </td>
+                  <div class="col-sm-4 col-md-4 place">
+      <div class="thumbnail">
+        <div class="caption">
+          <img src="{% static 'img/n.jpg'%}" alt="">
+          <h3>Thumbnail label</h3>
+          <p>...</p>
+        </div>
+      </div>
+    </div>
+    </tr>
+{% endfor %}
+
+</tbody>
+
+
+</table>
+</div>
+</div>
+{% endblock %}

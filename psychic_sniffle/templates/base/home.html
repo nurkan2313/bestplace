@@ -1,0 +1,32 @@
+{% extends "_layouts/base.html" %}
+{% load static %}
+
+{% block css %}
+{{block.super}}
+
+{% endblock css %}
+
+{% block page_title %}Psy Chick{% endblock %}
+{% block page_class %}home-page{% endblock %}
+
+
+{% block content %}
+
+<!-- background -->
+
+<div class="mask">
+	
+</div>
+<div class="cover-main">
+
+	<div class="fixed-bg">
+	    <form  class="search_main" role="search" action='{% url 'search' %}' method='get' style="padding-top:">{% csrf_token %}
+	        <h1 style="margin: 0;padding-left: 5px;color:#fff;padding-bottom: 20px;font-size: 50px;">Найди лучшее</h1>
+	        <div class="form-group">
+	            <input type="text" class="inp" name='q' placeholder="поиск..">
+	        </div>
+	            <button type="submit" class="butt">найти</button>
+	     </form>
+	</div>
+</div>
+{% endblock %}
